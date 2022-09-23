@@ -1,0 +1,130 @@
+@import "~@/assets/less/var.less";
+
+/* reset */
+body {
+  background-color: @BackgroundColor;
+  color: @FontColor;
+  // min-width: 1280px;
+}
+
+/* global */
+html,
+body,
+#app,
+.la-app {
+  font-size: @FontSizeSmall;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  a {
+    cursor: pointer;
+  }
+}
+
+// div,span,p,pre,h1,h2,h3,h4,h5,h6 {
+//   cursor: default;
+// }
+ul {
+  margin: 0px;
+  padding: 0;
+  list-style-type: none;
+}
+
+ol {
+  padding: 0 0 0 1.2em;
+}
+
+li {
+  list-style: none;
+}
+
+body,
+input,
+textarea,
+keygen,
+select,
+button {
+  font: @FontSize/@LineHeight "微软雅黑","Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: @FontColor1;
+  text-decoration: none;
+  cursor: pointer;
+
+  * {
+    cursor: pointer;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  img {
+    vertical-align: top;
+  }
+
+  &.el-button {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+p {
+  // margin: 0.8em 0;
+}
+
+.pr5 {
+  padding-right: 5px;
+}
+
+button {
+  cursor: pointer;
+}
+
+@border: 8px;
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: @border;
+  height: @border;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: @border;
+  background-color: @ScrollColor;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: @border;
+  background-color: #97A2BF;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-corner {
+  display: none;
+}
+
+.el-scrollbar__bar.is-vertical {
+  width: @border;
+}

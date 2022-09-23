@@ -1,0 +1,108 @@
+/deep/.el-tabs__nav-wrap {
+    border-bottom: 1px solid #EBEEF5;
+    .el-tabs__item.is-active {
+        color: #000F32;
+        font-weight: bold;
+        span {
+            color: #000F32 !important;
+            &>span {
+                color: #5C6973 !important;
+            }
+        }
+    }
+    .el-tabs__item:hover {
+        color: #4877E8;
+    }
+    .el-tabs__active-bar {
+        background-color: #4877E8;
+    }
+    .el-tabs__item {
+        position: relative;
+        padding: 0 10px;
+        &:last-child::after {
+            display: none;
+        }
+    }
+    .el-tabs__item::after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 14px;
+        background-color: #EBEEF5;
+        position: absolute;
+        right: 0;
+        top: 1em;
+    }
+}
+
+/deep/.el-table {
+    .cl-green {
+        color: #002FA7;
+    }
+    .el-table__row {
+        cursor: pointer;
+        td:first-child {
+            border-left: none;
+        }
+        td:last-child {
+            border-right: none;
+        }
+    }
+}
+
+/deep/.el-table__header-wrapper {
+
+    .cell {
+        height: 36px;
+        line-height: 40px;
+    }
+    th {
+        background-color: #EBEEF580;
+    }
+}
+
+
+/deep/.el-table__body-wrapper {
+    // overflow: visible;
+    .el-table__body {
+        // border-left: 1px solid #EBEEF5;
+        box-sizing: border-box;
+        border-bottom: 1px solid #EBEEF5;
+        tr:hover > td {
+            // background-color: #fff !important;
+        }
+    }
+    td {
+        border: 1px solid #EBEEF5;
+        border-right: 0;
+        border-bottom: 0;
+        .cl-blue {
+            color: #002FA7;
+        }
+        // border-bottom: 1px solid #EBEEF5;
+    }
+    td:last-child {
+        border-right: 1px solid #EBEEF5;
+    }
+    tr:last-child td {
+        // border-bottom: 1px solid #EBEEF5;
+
+    }
+    .cell {
+        min-height: 36px;
+    }
+    .el-table__append-wrapper {
+        position: sticky;
+        left: 0;
+        bottom: 0;
+        background-color: #fff;
+        z-index: 5;
+    }
+}
+.section-ico-qa {
+    width: 14px;
+    height: 14px;
+    display: block;
+    background-image: url(/static/imgs/globaldrugs/qa.png);
+    background-size: cover;
+}

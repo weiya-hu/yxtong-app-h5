@@ -1,0 +1,193 @@
+/deep/.el-table {
+    .cl-green {
+        color: #002FA7;
+    }
+}
+
+/deep/.el-table__header-wrapper {
+   
+    .cell {
+        height: 36px;
+        line-height: 40px;
+    }
+    th {
+        background-color: #EBEEF580;
+    }
+}
+
+
+/deep/.el-table__body-wrapper {
+    // overflow: visible;
+    .el-table__body {
+        // border-left: 1px solid #EBEEF5;
+        box-sizing: border-box;
+        border-bottom: 1px solid #EBEEF5;
+        tr:hover > td {
+            background-color: #fff !important;
+        }
+    }
+    td {
+        border: 1px solid #EBEEF5;
+        border-right: 0;
+        border-bottom: 0;
+        .cl-blue {
+            color: #002FA7;
+        }
+        // border-bottom: 1px solid #EBEEF5;
+    }
+    td:last-child {
+        border-right: 1px solid #EBEEF5;
+    }
+    tr:last-child td {
+        // border-bottom: 1px solid #EBEEF5;
+        
+    }
+    .cell {
+        min-height: 36px;
+        &>.line {
+            overflow: unset !important;
+            text-overflow: unset !important;
+        }
+    }
+    .el-table__append-wrapper {
+        position: sticky;
+        left: 0;
+        bottom: 0;
+        background-color: #fff;
+        z-index: 5;
+    }
+}
+
+/deep/.el-pagination {
+    border-left: 1px solid #EBEEF5;
+    border-right: 1px solid #EBEEF5;
+    box-sizing: border-box;
+    color: #666;
+    border-bottom: 1px solid #EBEEF5;
+    button {
+        width: 28px;
+        height: 28px;
+        border-radius: 4px;
+        border: 1px solid #DCDFE6;
+    }
+    .el-pager {
+        margin-left: 8px;
+    }
+    .number,.more {
+        min-width: 28px;
+        height: 28px;
+        line-height: 28px;
+        border-radius: 4px;
+        border: 1px solid #DCDFE6;
+        margin-right: 8px;
+        background-color: #fff;
+        font-weight: normal;
+        &.active {
+            background-color: #002FA7;
+            color: #fff;
+            border-color: #002FA7;
+        }
+    }
+    span:not([class*="suffix"]) {
+        height: 28px;
+        line-height: 28px;
+    }
+    .el-input__inner {
+        border-radius: 4px;
+    }
+}
+.el-pagination__total {
+    color: #5C6973;
+    font-size: 13px;
+}
+.sub-section {
+    margin-bottom: 10px;
+    &-title {
+        padding: 10px;
+        line-height: 1;
+        font-size: 14px;
+        position: relative;
+        &::before {
+          width: 2px;
+          height: 14px;
+          display: block;
+          content: "";
+          background-color: #002fa7;
+          position: absolute;
+          left: 0;
+        }
+      }
+}
+.cus-head {
+    width: 100%;
+    display: flex;
+    padding: 0;
+    div {
+      flex: 1;
+      padding: 0;
+      text-align: center;
+    }
+  }
+/deep/.el-tabs__nav-wrap {
+    border-bottom: 1px solid #EBEEF5;
+    .el-tabs__item.is-active {
+        color: #000F32;
+        font-weight: bold;
+        span {
+            color: #000F32 !important;
+            &>span {
+                color: #5C6973 !important;
+            }
+        }
+    }
+    .el-tabs__item:hover {
+        color: #002FA7;
+    }
+    .el-tabs__active-bar {
+        background-color: #002FA7;
+    }
+    .el-tabs__item {
+        position: relative;
+        padding: 0 10px;
+        &:last-child::after {
+            display: none;
+        }
+    }
+    .el-tabs__item::after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 14px;
+        background-color: #EBEEF5;
+        position: absolute;
+        right: 0;
+        top: 1em;
+    }
+}
+/deep/.el-card__body {
+    padding: 0 10px 10px;
+}
+
+/deep/.jzgj-searcher.el-autocomplete .el-input__prefix {
+    top: -3px;
+}
+
+.table-head-filter-span {
+    .el-icon-arrow-down {
+        width: 13px;
+        height: 13px;
+        border: 1px solid #DBDFE7;
+        display: inline-flex;
+        border-radius: 2px;
+        font-size: 12px;
+        box-sizing: border-box;
+        justify-content: center;
+        &.active {
+            color: #FFA914;
+        }
+        &::before {
+            transform: scale(.8);
+            display: inline-block;
+        }
+    }
+}

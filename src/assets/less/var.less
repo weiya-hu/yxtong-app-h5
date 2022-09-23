@@ -1,0 +1,174 @@
+// 清除浮动
+.clearfix(){
+  &:before,
+  &:after{
+    content:"";
+    display:table;
+  }
+  &:after{
+    clear:both;
+  }
+  *zoom:1;
+}
+//input框placeholder字体颜色改变
+.el-input__inner::-webkit-input-placeholder{
+  color:#A9ADB7;
+}
+.el-input__inner::-moz-placeholder{   /* Mozilla Firefox 19+ */
+  color:#A9ADB7;
+}
+.el-input__inner:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+  color:#A9ADB7;
+}
+.el-input__inner:-ms-input-placeholder{  /* Internet Explorer 10-11 */
+  color:#A9ADB7;
+}
+
+// 修改复选框字体大小
+.el-checkbox__label {
+  padding-left: 6px;
+  font-size: 12px;
+}
+
+.el-checkbox {
+  font-size: 12px;
+  color: #545B6D;
+}
+
+// input字体大小
+.el-input {
+  font-size: 12px
+}
+
+//input框边框颜色定义
+input.el-input__inner{
+  border-color: @BorderColorInput;
+}
+//buton按钮颜色定义
+button.border-color{
+  border-color:@BorderColorInput;
+}
+//checkbox框颜色定义
+.el-checkbox__inner{
+  width: 12px;
+  height: 12px;
+  border-color: #DFE5F1;
+}
+
+.el-checkbox__inner::after {
+  top: 0;
+}
+
+.el-select-dropdown__item {
+  font-size: 12px;
+}
+
+@Space : 16px;
+/*主色为蓝色系*/
+@PrimaryColor: #4877e8;
+@PrimaryColorLighten: lighten(@PrimaryColor, 10%);
+// @PrimaryBackgroundColor: #f6f8fc;
+@PrimaryBackgroundColor: #eff2fa;
+@SerchBackgroundColor: #F6F8FC;
+@SerchFontColor: #545B6D;
+//只针对数据库导航的特别样式
+@menuBackgroundColor: #ffffff;
+@menuHoverBackgroundColor: #35384a;
+/* @PrimaryBackgroundColor: hsl(hue(@PrimaryColor), 100%, 96%); */
+@GrayBackgroundColor: #f5f7fb;
+@NoPmsColor: #c0c4cc;
+@InputBgColor: #fff;
+/*字体颜色*/
+@Font: "microsoft yahei";
+@FontColor: #545B6D;
+@FontColorHover: #4877e8;
+@FontColor1: #626262;
+@FontColor2: #97a2bf;
+@FontColor3: #a9adb7;
+@FontColor4: #999;
+@FontColor5: #dcdcdc;
+@FontColor6: #c0c4cc;
+
+@FontWhite: #fff;
+@FontRed : #e74c3c;
+@LineHeight : 1.6;
+@BackgroundColor : #eff2fa;
+@BgGray: #97a2bf;
+
+@ScrollColor: rgba(144,147,153,.3);
+
+@Blue : #4877e8;
+@Green : #90c31f;
+@Orange : #f77d54;
+@Red : #e74c3c;
+@White: #fff;
+@LightGray: #dfe5f1;
+@DarkGray: #35384a;
+
+@FontSize: 14px;
+@FontSizeSmall: 12px;
+@FontSizeLarge: 16px;
+@FontSizeHuge: 20px;
+
+/* 通用头部head部分样式 */
+@HeadSearchBtn: #97a2bf;
+
+
+/* @BorderColor: hsl(hue(@PrimaryColor), 20%, 80%); */
+@BorderColor: #dfe5f1;
+@BorderColorFocus: @PrimaryColor;
+@BorderRadius : 2px;
+@BoxShadow: 0px 0px 5px rgba(196, 211, 248, 0.9);
+@BoxShadowHover: 0px 0px 10px 2px #c4d3f8;
+@BorderColorInput: #DFE5F1;
+@BorderColorNew: #d7ddeb;
+
+@InputLineHeight : 30px;
+@InputShadow : 1px 1px 1px #eee inset;
+
+@LeftSideWidth: 288px; // 左边栏的宽度
+
+/* table */
+/* @ThBackgroundColor: hsl(hue(@PrimaryColor)+12, 33%, 96%); */
+@ThBackgroundColor: #eaeef9;
+@TdBackgroundColor: #f5f8fB;
+
+
+@ReportBackgroundColor:#eff2fa;
+
+/* detail列表详情下的table */
+@DetailTableLeftColor: #f6f8fc;
+@DetailTableRightColor: #fdfdfd;
+@DetailTableHeadColor: #eaeef9;
+@DetailTableFloorColor: #f5f7fb;
+
+/* detail列表详情下的slide-section */
+@LineColor: #eaeaea;
+
+/* detail列表详情下的slide-section 时光轴样式 */
+@TimeMainBlue: #4877e8;
+@TimeBgBlue : #c8d6f8;
+@TimeLightBlue: #c8d6f8;
+@TimeMainGreen: #90c31f;
+@TimeBgGreen : #DFEDB8;
+@TimeMainOrange : #f77d54;
+@TimeBgOrange : #FED7CD;
+@TimeMainGray: #a9adb7;
+@TimeLightGray: #e5e6e9;
+@TimeBgGray: #f6f8fc;
+@TimeFontGray: #868ea3;
+
+@TimeArrayGray: #e1e6f0;
+@TimeArrayGreenOne: #b1d562;
+@TimeArrayGreenTwo: #9bc935;
+@TimeArrayGreenOneTwo: #90c31f;
+@TimeArrayGreenThree: #80b30f;
+
+// 会员中心：类型背景颜色
+@McTypeGreen: #90c320;
+@McTypeRed: #f77d54;
+@McTypeGray: #97a2bf;
+@McTypePurple: #8c66b9;
+@McTypeOrange: #f5a623;
+
+@MenuOrange: #ffab2a;

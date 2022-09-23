@@ -1,0 +1,55 @@
+.el-input__inner::-webkit-input-placeholder {
+  color: #A9ADB7;
+}
+.el-input__inner::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #A9ADB7;
+}
+.el-input__inner:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #A9ADB7;
+}
+.el-input__inner:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #A9ADB7;
+}
+.el-checkbox__label {
+  padding-left: 6px;
+  font-size: 12px;
+}
+.el-checkbox {
+  font-size: 12px;
+  color: #545B6D;
+}
+.el-input {
+  font-size: 12px;
+}
+.el-scrollbar__wrap {
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+input.el-input__inner {
+  border-color: #DFE5F1;
+}
+button.border-color {
+  border-color: #DFE5F1;
+}
+.el-checkbox__inner {
+  width: 12px;
+  height: 12px;
+  border-color: #DFE5F1;
+}
+.el-checkbox__inner::after {
+  top: 0;
+}
+/*主色为蓝色系*/
+/* @PrimaryBackgroundColor: hsl(hue(@PrimaryColor), 100%, 96%); */
+/*字体颜色*/
+/* 通用头部head部分样式 */
+/* @BorderColor: hsl(hue(@PrimaryColor), 20%, 80%); */
+/* table */
+/* @ThBackgroundColor: hsl(hue(@PrimaryColor)+12, 33%, 96%); */
+/* detail列表详情下的table */
+/* detail列表详情下的slide-section */
+/* detail列表详情下的slide-section 时光轴样式 */

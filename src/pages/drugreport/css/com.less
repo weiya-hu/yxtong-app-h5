@@ -1,0 +1,144 @@
+.detail-items {
+  // padding-bottom:50px;
+  background: #f0f2f9;
+  border-radius: 4px;
+
+  .detail-item {
+    background: #fff;
+    box-shadow: 0px 1px 8px 0px #D8E2FA;
+    border-radius: 4px;
+
+    .item-title {
+      position: relative;
+      height: 40px;
+      padding-left: 20px;
+      line-height: 32px;
+      background: #EFF2FA;
+
+      .text {
+        position: relative;
+        top: 5px;
+        display: inline-block;
+        padding: 0px 5px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #545B6D;
+        // border-bottom: 3px solid @PrimaryColor;
+
+        .num {
+          padding: 1px 5px;
+          margin-left: 10px;
+          border: 1px solid #545B6D;
+          border-radius: 15px;
+          font-weight: normal;
+          font-size: 12px;
+        }
+      }
+
+      .export {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        display: inline-block;
+        width: 66px;
+        height: 24px;
+        line-height: 24px;
+        background: #4877E8;
+        border-radius: 4px;
+        font-size: 14px;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 5px;
+        cursor: pointer;
+      }
+    }
+
+    .export-box {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .el-pagination {
+    padding-bottom: 10px;
+  }
+
+  .el-pagination .el-pager li {
+    background-color: #fff;
+  }
+
+  .el-pagination .el-pager li.active {
+    background-color: #4877e8;
+  }
+
+  .mt30 {
+    margin-top: 50px;
+  }
+
+  .mb50 {
+    margin-bottom: 10px;
+  }
+
+  .charts {
+    padding: 20px 0;
+  }
+}
+
+/deep/ .el-pagination .el-pager li {
+  background-color: #fff;
+}
+
+/deep/ .el-pagination .el-pager li.active {
+  background-color: #4877e8;
+}
+.tabs-wap {
+  position: relative;
+  padding: 0px 15px;
+  overflow: hidden;
+  font-size: 14px;
+
+  .hide {
+    display: none;
+  }
+
+  .tab-ctrl {
+    position: absolute;
+    top: 6px;
+    padding: 0px 5px;
+    background-color: #fff;
+
+    &.tabs-pre {
+      left: 0px;
+    }
+
+    &.tabs-next {
+      right: 0px;
+    }
+  }
+}
+
+.tabs {
+  width: 100%;
+  height: 50px;
+  line-height: 60px;
+
+  .tab-pane {
+    padding: 0px 20px;
+    cursor: pointer;
+
+    .num {
+      padding: 1px 5px;
+      margin-left: 5px;
+      border-radius: 15px;
+      border: 1px solid @BorderColor;
+    }
+
+    &.active {
+      color: @PrimaryColor;
+
+      .num {
+        border: 1px solid @PrimaryColor;
+      }
+    }
+  }
+}

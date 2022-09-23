@@ -1,0 +1,197 @@
+@import "~@/assets/less/var.less";
+@import "~@/assets/less/reset.less";
+@import "~@/assets/less/normalize.less";
+@import "~@/assets/less/animate.less";
+
+
+.bg-primary{
+  background: @PrimaryColor;
+}
+
+.cl-primary{
+  color: @PrimaryColor;
+}
+.cl-font{
+  color: @FontColor;
+}
+.cl-blue{
+  color: @Blue;
+}
+.cl-red{
+  color: @FontRed;
+}
+.cl-orange{
+  color: @Orange;
+}
+.cl-green{
+  color: @Green;
+}
+.clearfix{
+  .clearfix();
+}
+.clear{
+  clear: both;
+}
+.fs14{
+  font-size: @FontSize;
+}
+.fs15{
+  font-size: @FontSize+1;
+}
+.fs12{
+  font-size: @FontSizeSmall;
+}
+.fs13{
+  font-size: @FontSizeSmall+1;
+}
+.fs16{
+  font-size: @FontSizeLarge;
+}
+.fs18{
+  font-size: @FontSizeLarge+2;
+}
+.fs20{
+  font-size: @FontSizeHuge;
+}
+.fw-bold {
+  font-weight: bold;
+}
+
+.pt20{
+  padding-top: 20px;
+}
+.mt20{
+  padding-top: 20px;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.tc{
+  text-align: center;
+}
+.vm {vertical-align: middle;}
+.vt {vertical-align: top;}
+.vb {vertical-align: bottom;}
+.fb {font-weight: bold;}
+.ma {margin: 0 auto;}
+.pointer {cursor: pointer!important;}
+.ib {display: inline-block;}
+.pr {position: relative;}
+.pa {position: absolute;}
+.dn {display: none!important;}
+.ml10 {margin-left: 10px;}
+.flexl {display: flex;justify-content: flex-start;align-items: center;}
+.flexr {display: flex;justify-content: flex-end;align-items: center;}
+.fleximg {display: flex;justify-content: center;align-items: center;}
+.flexb {display: flex;justify-content: space-between;align-items: center;}
+
+// IE Patch
+input.el-input__inner {
+  line-height: 1 !important;
+  line-height: normal\9;
+}
+
+// 全局样式
+
+// start-下载按钮样式：http://localhost/pmda
+.download-box {
+  &:hover {
+    .icon-xiazai {
+      transition: all 100ms;
+      background-color: @PrimaryColor;
+      color: #fff;
+    }
+    .attachments {
+      transition: all 500ms;
+      transform: translateX(0px);
+      width: auto;
+      height: auto;
+      opacity: 1;
+    }
+  }
+  .attachments {
+    .vm;
+    transition: all 500ms;
+    transform: translateX(-10px);
+    opacity: 0;
+    width: 0;
+    height: 0;
+    border-radius: 10px;
+    background-color: @GrayBackgroundColor;
+    overflow: hidden;
+    display: inline-block;
+  }
+  .attachment {
+    .fs12;
+    .tc;
+    width: 44px;height: 26px;line-height: 20px;
+    display: inline-block;
+  }
+}
+.icon-xiazai {
+  .vm;
+  transition: all 100ms;
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  background-color: #fff;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 13px;
+  font-size: 16px;
+}
+// end-下载按钮样式
+
+// el-table 样式
+.el-table__row {
+  .fs13;
+}
+// el-table 组件：当给 el-table-column 应用了 type=expand 之后，将默认产生用于展开行的点击按钮图标，此处将其隐藏。
+.extensible-table {
+  .el-table__expand-column>.cell{
+    padding: 0 !important;
+
+    >.el-table__expand-icon {
+      visibility: hidden;
+    }
+  }
+}
+.head + .view {
+  .el-table {
+    th, td {
+      > div.cell:first-child {
+        padding-left: 30px;
+      }
+    }
+  }
+  .el-tabs__header {
+    padding-left: 30px;
+  }
+}
+
+//具有放大功能的图片上的鼠标显示样式
+.magnify-img {
+  cursor: url('/static/imgs/magnifier.cur'),pointer;
+}
+.lineTwoHidden{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  max-height: 35px;
+}
+
+//法律法规-指导原则详情页的tooltip
+.tooltip-guid-detail{
+  .online{
+    color:#182462 ;
+    text-decoration:underline;
+    text-decoration-color:#182462;
+    cursor: pointer;
+  }
+}

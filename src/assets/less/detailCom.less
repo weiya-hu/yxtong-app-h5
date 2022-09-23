@@ -1,0 +1,288 @@
+@import "~@/assets/less/var.less";
+
+// 边距调整会影响头部固定及左侧导航固定事件，需要同时修改mixins\detailScroll.js
+@top: 20px;
+@left: 10px;
+@right: 10px;
+@bottom: 15px;
+
+// 详情页布局样式
+.wrapper {
+  min-width: 1231px;
+
+  .linkPrimaryColor {
+    color: @PrimaryColor;
+  }
+
+  .detail-list {
+    position: relative;
+    padding: 0 @left 0 @right;
+
+    .detail-header {
+      display: flex;
+      align-items: center;
+      height: 40px;
+      // top: 0;
+
+      .header-left {
+        padding-bottom: 5px;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        flex: 1;
+
+        .left-top {
+          display: flex;
+          align-items: center;
+          width: calc(100vw - 30px);
+        }
+
+        .top-id {
+          max-width: 60vw;
+          display: inline-block;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          height: 22px;
+          line-height: 20px;
+          font-size: 18px;
+          font-family: Source Han Sans CN;
+          font-weight: bold;
+          color: #545b6d;
+          margin-right: 30px;
+        }
+
+        .top-num {
+          display: inline-block;
+          font-size: 16px;
+          line-height: 1;
+          font-weight: bold;
+          margin-right: 10px;
+          white-space: nowrap;
+        }
+
+        .top-name {
+          display: inline-block;
+          font-size: 20px;
+          line-height: 1;
+          margin-right: 10px;
+          white-space: nowrap;
+        }
+
+        .id-green {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0 10px;
+          border-radius: 10px;
+          height: 22px;
+          line-height: 22px;
+          background: @Green;
+          color: #fff;
+          white-space: nowrap;
+          font-size: 12px;
+          font-family: Microsoft YaHei;
+          font-weight: 400;
+          margin-left: 0;
+        }
+
+        span.id-green + span.id-green {
+          margin-left: 20px !important;
+        }
+
+        .bg-blue {
+          background: @Blue;
+        }
+
+        .bg-green {
+          background: @Green;
+        }
+
+        .bg-orange {
+          background: @Orange;
+        }
+
+        .left-bottom {
+          display: flex;
+          align-items: flex-end;
+          white-space: nowrap;
+          margin-right: 20px;
+
+          .bottom-name {
+            display: flex;
+            font-size: 13px;
+            margin-left: 0;
+            height: 20px;
+            line-height: 20px;
+            font-family: Source Han Sans CN;
+            font-weight: 400;
+            color: #606266;
+            white-space: nowrap;
+          }
+
+          .company-name {
+            margin-left: 20px;
+            margin-right: 20px;
+            display: flex;
+            font-size: 13px;
+            height: 20px;
+            line-height: 20px;
+            font-family: Source Han Sans CN;
+            font-weight: 400;
+            color: #4877e8;
+
+            a {
+              color: @PrimaryColor;
+            }
+          }
+
+          /deep/.el-breadcrumb {
+            margin-top: 2px;
+          }
+        }
+
+        .fontw {
+          font-weight: 700;
+        }
+      }
+
+      .header-right {
+        // 导航
+        .breadcrumb-f {
+          display: flex;
+          align-items: flex-end;
+
+          /deep/.el-breadcrumb {
+            display: block;
+            padding-right: 0;
+          }
+
+          .help-tip {
+            margin-right: 5px;
+            display: inline-block;
+            line-height: 1;
+          }
+        }
+      }
+    }
+
+    .header-fixed {
+      width: 100%;
+      position: fixed;
+      z-index: 99;
+      background: #eff2fa;
+      padding: @top @left @bottom @right;
+      right: 0;
+      box-sizing: border-box;
+      box-shadow: @BoxShadowHover;
+    }
+
+    .anim-none {
+      animation: none;
+    }
+
+    // 主要信息部分
+    .main {
+      position: relative;
+      transition-property: marginTop;
+      transition-duration: 1s;
+
+      .classified-in {
+        position: relative;
+      }
+
+      // 左边 - 导航
+      .left-nav-in,
+      .left-nav {
+        position: fixed;
+        top: 88px;
+        left: 10px;
+
+        .nav-list {
+          .nav-item {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            width: 180px;
+            padding: 13px 0;
+            border-radius: 4px;
+            padding-left: 18px;
+            margin-left: 0px;
+            border-bottom: 1px solid @BorderColor;
+            cursor: pointer;
+            box-sizing: border-box; // 若不是border-box，则需要改变宽度
+            font-size: 14px;
+
+            &:hover {
+              transition: all 500ms;
+              margin-left: 0px;
+              display: flex;
+              width: 180px;
+              height: 100%;
+              background: #ffffff;
+              border-radius: 4px;
+              padding-left: 18px;
+              position: relative;
+              background: #fff;
+              border-bottom: none;
+              color: @PrimaryColor;
+
+              // box-shadow: @BoxShadow;
+              &::before {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 4px;
+                height: 100%;
+                background: @PrimaryColor;
+                border-radius: 4px;
+              }
+            }
+          }
+
+          // 导航选项 - active
+          .active {
+            margin-left: 0px;
+            width: 180px;
+            padding-left: 18px;
+            position: relative;
+            background: #fff;
+            border-bottom: none;
+            color: @PrimaryColor;
+            box-shadow: @BoxShadow;
+
+            &::before {
+              content: "";
+              display: inline-block;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 4px;
+              height: 100%;
+              background: @PrimaryColor;
+              border-radius: 4px;
+            }
+          }
+        }
+      }
+
+      // 右边 - 详细列表
+      .right-list {
+        padding-left: 190px;
+        padding-top: 50px;
+      }
+    }
+  }
+}
+
+@keyframes headermove {
+  from {
+    transform: translate(0, -100%);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}

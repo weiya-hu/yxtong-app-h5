@@ -1,0 +1,23 @@
+User-agent: * 
+Allow: /
+#屏蔽抓取黑链
+Disallow: /?*.znb
+Disallow: /?*.xml
+Disallow: /?*.xlsx
+Disallow: /?*.xls
+Disallow: /?*.txt
+Disallow: /?*.shtml
+Disallow: /?*.pptx
+Disallow: /?*.ppt
+Disallow: /?*.msl
+Disallow: /?*.mdb
+Disallow: /?*.love
+Disallow: /?*.pdf
+Disallow: /?*.fdc
+Disallow: /?*.docx
+Disallow: /?*.doc
+Disallow: /?*.csv
+Disallow: /?*.bug
+
+#屏蔽大量抓取的一条ajax
+Disallow: /ajax/getDbListData?yaozhVersion=*

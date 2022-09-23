@@ -1,0 +1,10 @@
+
+生成单个日志
+    读取浏览器内的cookie
+    将变量 href timestamp yaozh_user yaozh_userId yaozh_logintime yaozh_uidhas yaozh_mylogin accesstoken组织成一个对象。记为一条数据。
+
+记录日志 
+    先将localStorage中记录的名为 ‘yz_login_state_log’的数组字段读取，如果长度等于100了，就去除头部一条数据，并在最后增加一条新生成的日志数据。保持只记录100条数据。
+
+当在出现异常状况的时候
+    在各个站点的localStorage中手动导出日志数据进行时间排序，通过对数据内登录凭证的检查，可以得知在哪里凭证出现了变化。
